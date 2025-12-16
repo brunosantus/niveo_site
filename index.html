@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NIVEO | Evolução Digital</title>
+    <!-- Mantendo Tailwind via CDN para garantir estilos sem setup complexo de PostCSS no build, 
+         embora o ideal em produção fosse instalar o tailwindcss via npm -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,19 +91,21 @@
   <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.559.0",
-    "react/": "https://esm.sh/react@^19.2.1/",
-    "react": "https://esm.sh/react@^19.2.1",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-i18next": "https://esm.sh/react-i18next@^16.5.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
     "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
-    "i18next": "https://esm.sh/i18next@23.10.0",
-    "react-i18next": "https://esm.sh/react-i18next@14.1.0",
-    "i18next-browser-languagedetector": "https://esm.sh/i18next-browser-languagedetector@7.2.0"
+    "i18next": "https://esm.sh/i18next@^25.7.3",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
